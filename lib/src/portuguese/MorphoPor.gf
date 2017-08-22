@@ -44,20 +44,41 @@ oper
   mkNounIrreg : Str -> Str -> Gender -> Noun = \mec,mecs -> 
     mkNoun (numForms mec mecs) ;
 
-  mkNomReg : Str -> Noun = \mec ->
-    case mec of {
-      _ + ("o" | "e" | "é" | "á") => mkNoun (nomVino mec) Masc ;  --bebé, papá; how about other accented vocal endings? champú champúes
-      _ + "a" => mkNoun (nomVino mec) Fem ;
-      _ + "z" => mkNounIrreg mec (init mec + "ces") Fem ;
-      _ + "ión" => mkNounIrreg mec (tk 2 mec + "ones") Fem ;
-      _ + "tud" => mkNounIrreg mec (mec + "es") Fem ;
-      _ + "án" => mkNounIrreg mec (tk 2 mec + "anes") Masc ;
-      _ + "én" => mkNounIrreg mec (tk 2 mec + "enes") Masc ;
-      _ + "ín" => mkNounIrreg mec (tk 2 mec + "ines") Masc ;
-      _ + "ón" => mkNounIrreg mec (tk 2 mec + "ones") Masc ;
-      _ + "ún" => mkNounIrreg mec (tk 2 mec + "unes") Masc ;
-      _   => mkNoun (nomPilar mec) Masc
+    mkNounReg : Str -> Noun = \s ->
+      mkNoun (numForms s (pluralize s)) (gender s) ;
+
+    -- heuristic for the pluralization of a string (for nouns and adjectives)
+    pluralize : Str -> Str = \w -> case w of {
+      s + "il"     => s + "is" ;
+      s + "l"      => s + "is" ;
+      s + "m"      => s + "ns" ;
+      s + "x"      => s + "ces" ;
+      s + c@#cons  => s + c + "es" ;
+      s + "ão"     => s + "ões" ;
+      s + v@#vowel => s + v+ "s"
       } ;
+
+    -- heuristic for femininization of a string (for adjectives)
+    femininize : Str -> Str = \w -> case w of {
+      s + "ão"              => s + "ã" ;
+      s + ("o")             => s + "a" ;
+      s + t@("u"|"ês"|"or") => s + t + "a" ;
+      s + "eu"              => s + "eia" ;
+      _                     => w
+      } ;
+
+    -- heuristic for determining the gender of a noun
+    gender : Str -> Gender = \s -> case s of {
+      cap + ("ote"|"ume"|"ude") => Masc ;
+      cas + ("a"|"ã"|"e") => Fem ;
+      _   + #vowel => Masc ;
+      ori + "gem" => Fem ;
+      v   + ("ez"|"iz") => Fem;
+      _   + #cons => Masc
+      } ;
+
+    vowel : pattern Str = #("a"|"á"|"â"|"ã"|"à"|"e"|"é"|"ê"|"i"|"í"|"o"|"ó"|"ô"|"õ"|"u"|"ú") ;
+    cons  : pattern Str = #("b"|"c"|"ç"|"d"|"f"|"g"|"h"|"j"|"k"|"l"|"m"|"n"|"p"|"q"|"r"|"s"|"t"|"v"|"w"|"x"|"z") ;
 
 
 --2 Adjectives

@@ -329,7 +329,7 @@ oper
 
 
   mk2N x y g = mkNounIrreg x y g ** {lock_N = <>} ;
-  regN x = mkNomReg x ** {lock_N = <>} ;
+  regN x = mkNounReg x ** {lock_N = <>} ;
   compN x y = {s = \\n => x.s ! n ++ y ; g = x.g ; lock_N = <>} ;
   femN x = {s = x.s ; g = feminine ; lock_N = <>} ;
   mascN x = {s = x.s ; g = masculine ; lock_N = <>} ;
