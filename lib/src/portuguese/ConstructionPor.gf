@@ -88,11 +88,11 @@ oper mkLanguage : Str -> N = \s -> mkN s ;
 ----------------------------------------------
 ---- lexicon of special names
 
-lin monday_Weekday = mkN "lunes" ;
-lin tuesday_Weekday = mkN "martes" ;
-lin wednesday_Weekday = mkN "miércoles" ;
-lin thursday_Weekday = mkN "jueves" ;
-lin friday_Weekday = mkN "viernes" ;
+lin monday_Weekday = mkN "segunda" ;
+lin tuesday_Weekday = mkN "terça" ;
+lin wednesday_Weekday = mkN "quarta" ;
+lin thursday_Weekday = mkN "quinta" ;
+lin friday_Weekday = mkN "sexta" ;
 lin saturday_Weekday = mkN "sábado" ;
 lin sunday_Weekday = mkN "domingo" ;
 

@@ -1,9 +1,9 @@
 --# -path=.:../romance:../common:../abstract:../../prelude
 
-concrete LexiconPor of Lexicon = CatPor ** open 
+concrete LexiconPor of Lexicon = CatPor ** open
   (M=MorphoPor), ParadigmsPor, BeschPor in {
 
-flags 
+flags
     coding=utf8 ;
   optimize=values ;
 
@@ -12,7 +12,7 @@ lin
    answer_V2S = mkV2S (regV "responder") dative ;
    apartment_N = regN "apartamento" ;
    apple_N = regN "maçã" ;
-   art_N = regN "arte" ;	
+   art_N = regN "arte" ;
    ask_V2Q = mkV2Q (regV "perguntar") dative ;
    baby_N = regN "bebê" ;		-- can be used for both fem. & masc.
    bad_A = prefA (mkADeg (regA "mau") (regA "pior")) ;
@@ -70,7 +70,7 @@ lin
    eat_V2 = dirV2 (regV "comer") ;
    empty_A = regADeg "vazio" ;
    enemy_N = regN "inimigo" ;		-- enemiga
-   factory_N = regN "fábrica" ;	
+   factory_N = regN "fábrica" ;
    father_N2 = deN2 (regN "pai") ;
    fear_VS = mkVS (regV "temer") ;
    find_V2 = dirV2 (verboV (encontrar_38 "encontrar")) ;
@@ -119,14 +119,14 @@ lin
    man_N = regN "homem" ;		-- masc
    married_A2 = mkA2 (regA "casado") dative ;
    meat_N = femN (regN "carne") ;
-   milk_N = femN (regN "leite") ;
+   milk_N = mascN (regN "leite") ;
    moon_N = regN "lua" ;
    mother_N2 = deN2 (mkN "mãe" feminine) ;
    mountain_N = mkN "montanha" ;
    music_N = mkN "música" ;
    narrow_A = regADeg "estreito" ;
    new_A = prefA (regADeg "novo") ;
-   newspaper_N = mkN "jornal" ;		-- diario  
+   newspaper_N = mkN "jornal" ;		-- diario
    oil_N = mkN "óleo" ;
    old_A =  prefA (regADeg "velho") ;
    open_V2 = dirV2 (special_ppV (regV "abrir") "aberto") ;
@@ -140,7 +140,7 @@ lin
    play_V2 = dirV2 (verboV (jugar_47 "jogar")) ;
    policeman_N = mkN "polícia" masculine ;	-- fem refers to the institution
    priest_N = mkN "padre" masculine ;		-- masc
-   probable_AS = mkAS (regA "provável") ;	
+   probable_AS = mkAS (regA "provável") ;
    queen_N = mkN "rainha" ;
    question_N = mkN "pergunta" ;
    radio_N = mkN "rádio" feminine ;
@@ -149,7 +149,7 @@ lin
    reason_N = mkN "razão" feminine ;
    red_A = regADeg "vermelho" ;
    religion_N = mkN "religião" "religiões" feminine ;
-   restaurant_N = mkN "restaurante" ;		-- restorán, restaurán, masc
+   restaurant_N = mascN (mkN "restaurante") ;		-- restorán, restaurán, masc
    river_N = mkN "rio" ;
    rock_N = mkN "rocha" ;
    roof_N = mkN "teto" ;
@@ -158,13 +158,13 @@ lin
    say_VS = mkVS (verboV (decir_28 "decir")) ;
    school_N = regN "escola" ;
    science_N = regN "ciência" ;
-   sea_N = regN "mar" ;			-- masc & fem 
+   sea_N = regN "mar" ;			-- masc & fem
    seek_V2 = dirV2 (regV "buscar") ;
    see_V2 = dirV2 (verboV (ver_83 "ver")) ;
    sell_V3 = dirV3 (regV "vender") dative ;
    send_V3 = dirV3 (regV "mandar") dative ;
    sheep_N = regN "ovelha" ;
-   ship_N = femN (regN "navio") ;
+   ship_N = regN "navio" ;
    shirt_N = regN "camisa" ;
    shoe_N = regN "sapato" ;
    shop_N = regN "negócio" ;
@@ -177,15 +177,15 @@ lin
    sock_N = regN "meia" ;
    speak_V2 = dirV2 (regV "hablar") ;
    star_N = regN "estrela" ;
-   steel_N = regN "acero" ;
+   steel_N = regN "aço" ;
    stone_N = regN "pedra" ;
    stove_N = regN "forno" ;		-- estufa
    student_N = regN "estudante" ;	-- used both for fem & masc
    stupid_A = regADeg "estúpido" ;
-   sun_N = regN "sol" ;	
+   sun_N = regN "sol" ;
    switch8off_V2 = dirV2 (regV "apagar") ;
    switch8on_V2 = dirV2 (regV "prender") ;
-   table_N = regN "mesa" ; 
+   table_N = regN "mesa" ;
    talk_V3 = mkV3 (regV "hablar") dative genitive ;
    teacher_N = regN "professor" ;		-- maestra
    teach_V2 = dirV2 (regV "enseñar") ;
@@ -205,7 +205,7 @@ lin
    warm_A = regADeg "quente" ;
    war_N = mkN "guerra" ;
    watch_V2 = dirV2 (regV "mirar") ;		-- ver
-   water_N = mkN "água" ; 
+   water_N = mkN "água" ;
    white_A = compADeg (regA "branco") ;
    window_N = regN "janela" ;
    wine_N = regN "vinho" ;
@@ -215,7 +215,7 @@ lin
    wood_N = regN "madeira" ;
    write_V2 = dirV2 (special_ppV (regV "escribir") "escrito") ;
    yellow_A = regADeg "amarelo" ;
-   young_A = prefA (mkA "jovem" "jovem" "jóvens" "jóvens" "jovialmente") ; 
+   young_A = prefA (mkA "jovem" "jovem" "jóvens" "jóvens" "jovialmente") ;
 
    do_V2 =  dirV2 (verboV (hacer_44 "hacer")) ;
    now_Adv = mkAdv "agora" ;
@@ -224,7 +224,7 @@ lin
    add_V3 = dirV3 (regV "sumar") dative ;
    number_N = regN "número" ;
    put_V2 = dirV2 (verboV (poner_60 "poner")) ;
-   stop_V = regV "parar" ; 
+   stop_V = regV "parar" ;
    jump_V = regV "saltar" ;
 
   left_Ord = M.mkOrd (regA "esquerda") ;
@@ -246,9 +246,9 @@ lin
    animal_N = regN "animal" ;           -- masc (sometimes fem when adj)
    ashes_N = regN "cinza" ;
    back_N = regN "costa" ;
-   bark_N = regN "corteza" ;
+   bark_N = regN "casca" ;
    belly_N = regN "pança" ;             -- barriga
-   blood_N = femN (regN "sangue") ;
+   blood_N = mascN (regN "sangue") ;
    bone_N = regN "osso" ;
    breast_N = regN "seio" ;             -- pecho
    cloud_N = femN (regN "nuvem") ;
@@ -272,7 +272,7 @@ lin
    hand_N = femN (regN "mão") ;
    head_N = regN "cabeça" ;
    heart_N = mkN "coração" "corações" masculine ;
-   horn_N = regN "chifre" ;
+   horn_N = mascN (regN "chifre") ;
    husband_N = regN "marido" ;  -- esposo
    ice_N = regN "gelo" ;
    knee_N = regN "joelho" ;
@@ -281,16 +281,16 @@ lin
    liver_N = regN "fígado" ;
    louse_N = regN "piolho" ;
    mouth_N = regN "boca" ;
-   name_N = regN "nome" ;
+   name_N = mascN (regN "nome") ;
    neck_N = regN "pescoço" ;
    night_N = femN (regN "noite") ;
-   nose_N = femN (regN "nariz") ;
+   nose_N = mascN (regN "nariz") ;
    person_N = regN "pessoa" ;
    rain_N = regN "chuva" ;
    road_N = femN (regN "rua") ;               -- camino
    root_N = femN (regN "raiz") ;
    rope_N = regN "corda" ;
-   salt_N = femN (regN "sal") ;
+   salt_N = regN "sal" ;
    sand_N = regN "areia" ;
    seed_N = regN "semente" ;
    skin_N = femN (regN "pele") ;        -- fem
@@ -300,12 +300,12 @@ lin
    stick_N = mkN "bastão" "bastões" masculine ;                -- palo
    tail_N = regN "rabo" ;
    tongue_N = regN "língua" ;
-   tooth_N = regN "dente" ;
+   tooth_N = mascN (regN "dente") ;
    wife_N = regN "esposa" ;
-   wind_N = regN "viento" ;
+   wind_N = regN "vento" ;
    wing_N = regN "asa" ;
    worm_N = regN "minhoca" ;             -- lombriz (fem)
-   year_N = regN "añn" ;
+   year_N = regN "ano" ;
   bite_V2 = dirV2 (verboV (morder_50b "morder")) ;
    blow_V = regV "soprar" ;
    burn_V = regV "queimar" ;
