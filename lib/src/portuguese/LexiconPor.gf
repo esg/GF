@@ -91,7 +91,7 @@ lin
    harbour_N = regN "porto" ;
    hate_V2 = dirV2 (mkV "odiar" "odeio") ;
    hat_N = regN "chapéu" ;
-   hear_V2 = dirV2 (mkV (oir_51 "oír")) ;
+   hear_V2 = dirV2 (mkV (ouvir_51 "ouvir")) ;
    hill_N = regN "colina" ;
    hope_VS = mkVS (regV "esperar") ;
    horse_N = regN "cavalo" ;
@@ -101,7 +101,7 @@ lin
    industry_N = regN "indústria" ;
    iron_N = regN "ferro" ;
    king_N = regN "rei" ;
-   know_V2 = mkV2 (verboV (conocer_25 "conocer")) ;
+   know_V2 = mkV2 (verboV (conhecer_25 "conhecer")) ;
    know_VQ = mkVQ (verboV (saber_71 "saber")) ;
    know_VS = mkVS (verboV (saber_71 "saber")) ;
    lake_N = regN "lago" ;
@@ -137,7 +137,7 @@ lin
    pen_N = mkN "caneta" ;
    planet_N = mkN "planeta" masculine ;
    plastic_N = mkN "plástico" ;
-   play_V2 = dirV2 (verboV (jugar_47 "jogar")) ;
+   play_V2 = dirV2 (verboV (jogar_47 "jogar")) ;
    policeman_N = mkN "polícia" masculine ;	-- fem refers to the institution
    priest_N = mkN "padre" masculine ;		-- masc
    probable_AS = mkAS (regA "provável") ;
