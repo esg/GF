@@ -12,32 +12,32 @@ lincat
 lin num x = x ;
 
 lin n2 = 
-  mkTal "dos"    "doce"       "veinte"    "doscientos"    
-        "segundo" "duodécimo" "vigésimo" "ducentésimo" ;
+  mkTal "dois"    "doze"       "vinte"    "duzentos"    
+        "segundo" "décimo segundo" "vigésimo" "ducentésimo" ;
 lin n3 = 
-  mkTal "tres"   "trece"      "treinta"   "trescientos"   
-        "tercero" "decimotercero" "trigésimo" "tricentesimo" ;
+  mkTal "três"   "treze"      "trinta"   "trezentos"   
+        "terceiro" "décimo terceiro" "trigésimo" "tricentésimo" ;
 lin n4 = 
-  mkTal "cuatro" "catorce"    "cuarenta"  "cuatrocientos" 
-        "cuarto" "decimocuarto" "cuadragésimo" "cuadringentesimo" ;
+  mkTal "quatro" "catorze"    "quarenta"  "quatrocentos" 
+        "quarto" "décimo quarto" "quadragésimo" "quadringentésimo" ;
 lin n5 = 
-  mkTal "cinco"  "quince"     "cincuenta" "quinientos"
-        "quinto" "decimoquinto" "quincuagésimo" "guingentésimo" ;
+  mkTal "cinco"  "quinze"     "cinquenta" "quinhentos"
+        "quinto" "décimo quinto" "quincuagésimo" "quingentésimo" ;
 lin n6 = 
-  mkTal "seis"   "dieciséis"  "sesenta"   "seiscientos"
-        "sexto" "decimosexto" "sexagésimo" "sexcentesimo" ;
+  mkTal "seis"   "dezesseis"  "sessenta"   "seiscentos"
+        "sexto" "décimo sexto" "sexagésimo" "seiscentésimo" ;
 lin n7 = 
-  mkTal "siete"  "diecisiéte" "setenta"   "setecientos"
-        "séptimo" "decimoséptimo" "septuagésimo" "septingentesimo" ;
+  mkTal "sete"  "dezessete" "setenta"   "setecentos"
+        "sétimo" "décimo sétimo" "septuagésimo" "setingentésimo" ;
 lin n8 = 
-  mkTal "ocho"   "dieciocho"  "ochenta"   "ochocientos"
-        "octavo" "decimoctavo" "octogésimo" "octingentésimo" ;
+  mkTal "oito"   "dezoito"  "oitenta"   "oitocentos"
+        "octavo" "décimo ctavo" "octogésimo" "octingentésimo" ;
 lin n9 = 
-  mkTal "nueve"  "diecinueve" "noventa"   "novecientos"
-        "noveno" "decimonoveno" "nonagésimo" "noningentésimo"  ;
+  mkTal "nove"  "dezenove" "noventa"   "novecentos"
+        "nono" "décimo nono" "nonagésimo" "noningentésimo"  ;
 
 lin pot01 = 
-  let uno = (mkTal "uno" "once" "diez" "ciento" "primero" "undécimo"
+  let uno = (mkTal "um" "onze" "dez" "cento" "primeiro" "décimo primeiro"
   "décimo" "centésimo").s in
   {s =\\f,g => case <f,g> of {
      <ental pred,_> => [] ;

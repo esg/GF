@@ -20,11 +20,11 @@ concrete IdiomPor of Idiom = CatPor **
 
     ExistNP np = 
       mkClause [] True False (agrP3 Masc Sg)
-        (insertComplement (\\_ => (np.s ! Acc).ton) (predV (verboV (hay_3 "haber")))) ;
+        (insertComplement (\\_ => (np.s ! Acc).ton) (predV (verboV (hay_3 "haver")))) ;
     ExistIP ip = {
       s = \\t,a,p,_ =>
         ip.s ! Nom ++ 
-        (mkClause [] True False (agrP3 Masc Sg) (predV (verboV (hay_3 "haber")))).s ! DDir ! t ! a ! p ! Indic
+        (mkClause [] True False (agrP3 Masc Sg) (predV (verboV (hay_3 "haver")))).s ! DDir ! t ! a ! p ! Indic
       } ;
 
     ProgrVP vp = 
