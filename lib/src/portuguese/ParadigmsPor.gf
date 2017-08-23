@@ -21,7 +21,7 @@
 -- regular cases. Then we give a worst-case function $mkC$, which serves as an
 -- escape to construct the most irregular words of type $C$. For
 -- verbs, there is a fairly complete list of irregular verbs in
--- [``IrregPor`` ../../spanish/IrregPor.gf].
+-- [``IrregPor`` ../../portuguese/IrregPor.gf].
 
 resource ParadigmsPor = 
   open 
@@ -157,9 +157,9 @@ oper
     mkA : (solo,sola,solos,solas,solamente : Str) -> A ; -- worst-case
 
 -- In the worst case, two separate adjectives are given: 
--- the positive ("bueno"), and the comparative ("mejor"). 
+-- the positive ("bom"), and the comparative ("melhor"). 
 
-    mkA : (bueno : A) -> (mejor : A) -> A -- special comparison (default with "mas")
+    mkA : (bom : A) -> (melhor : A) -> A -- special comparison (default with "mas")
     } ;
 
 -- The functions above create postfix adjectives. To switch
