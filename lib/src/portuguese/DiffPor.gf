@@ -32,10 +32,10 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
     artDef : Bool -> Gender -> Number -> Case -> Str = \isNP,g,n,c ->
       case isNP of {
        True => case <g,n,c> of {
-        <Masc,Sg, _>          => prepCase c ++ "el" ;
-	<Fem, Sg, _> => prepCase c ++ "la" ; ----- ??
-        <Masc,Pl, _> => prepCase c ++ "los" ;
-        <Fem ,Pl, _> => prepCase c ++ "las"
+        <Masc,Sg, _>          => prepCase c ++ "o" ;
+	<Fem, Sg, _> => prepCase c ++ "a" ; ----- ??
+        <Masc,Pl, _> => prepCase c ++ "os" ;
+        <Fem ,Pl, _> => prepCase c ++ "as"
         } ;
       _ => case <g,n,c> of {
         <Masc,Sg, CPrep P_de> => "del" ;
@@ -51,11 +51,11 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
 
     artIndef = \isNP,g,n,c -> case isNP of {
       True => case n of {
-        Sg  => prepCase c ++ genForms "uno"  "una" ! g ;
-        _   => prepCase c ++ genForms "unos" "unas" ! g  
+        Sg  => prepCase c ++ genForms "um"  "uma" ! g ;
+        _   => prepCase c ++ genForms "uns" "umas" ! g  
         } ;
       _ => case n of {
-        Sg  => prepCase c ++ genForms "un"   "una" ! g ;
+        Sg  => prepCase c ++ genForms "um"   "uma" ! g ;
         _   => prepCase c 
         }
       } ;
@@ -141,12 +141,12 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
 
     negation : RPolarity => (Str * Str) = table {
       RPos => <[],[]> ;
-      RNeg _ => <"no",[]>
+      RNeg _ => <"não",[]>
       } ;
 
     conjThan = "que" ;
     conjThat = "que" ;
-    subjIf = "si" ;
+    subjIf = "se" ;
 
 
     clitInf b cli inf = inf ++ bindIf b ++ cli ;
@@ -154,13 +154,13 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
     relPron : Bool => AAgr => Case => Str = \\b,a,c => 
       case c of {
         Nom | Acc => "que" ;
-        CPrep P_a => "cuyo" ;
-        _ => prepCase c ++ "cuyo"
+        CPrep P_a => "cujo" ;
+        _ => prepCase c ++ "cujo"
         } ;
 
-    pronSuch : AAgr => Str = aagrForms "tál" "tál" "tales" "tales" ;
+    pronSuch : AAgr => Str = aagrForms "tal" "tal" "tais" "tais" ;
 
-    quelPron : AAgr => Str = aagrForms "cuál" "cuál" "cuales" "cuales" ;
+    quelPron : AAgr => Str = aagrForms "qual" "qul" "quais" "quais" ;
 
     partQIndir = [] ; ---- ?
 
@@ -170,7 +170,7 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
         case p of { 
         P3 => case c of {
           Acc | CPrep P_a => "se" ;
-          _ => "sí"
+          _ => "si"
           } ;
         _ => pro
         } ; 
@@ -190,12 +190,12 @@ instance DiffPor of DiffRomance - [partAgr,vpAgrSubj,vpAgrClits] = open CommonRo
       \g,n,p -> case <<g,n,p> : Gender * Number * Person> of { 
         <_,Sg,P1> => cases "me" "mí" ;
         <_,Sg,P2> => cases "te" "tí" ;
-        <_,Pl,P1> => cases "nos" "nosotras" ; --- nosotros
-        <_,Pl,P2> => cases "vos" "vosotras" ; --- vosotros
-        <Fem,Sg,P3> => cases3 "la" "le" "ella" ;
-        <_,  Sg,P3> => cases3 "lo" "le" "èl" ;
-        <Fem,Pl,P3> => cases3 "las" "les" "ellas" ;
-        <_,  Pl,P3> => cases3 "los" "les" "ellos"
+        <_,Pl,P1> => cases "nós" "nós" ; --- nosotros
+        <_,Pl,P2> => cases "vós" "vós" ; --- vosotros
+        <Fem,Sg,P3> => cases3 "a" "lhe" "ela" ;
+        <_,  Sg,P3> => cases3 "o" "lhe" "ele" ;
+        <Fem,Pl,P3> => cases3 "as" "lhes" "elas" ;
+        <_,  Pl,P3> => cases3 "os" "lhes" "elos"
         } ;
 
     vRefl _ = VRefl ;
