@@ -31,7 +31,7 @@ lin
    boot_N = regN "bota" ;
    boss_N = regN "chefe" ;
    boy_N = regN "menino" ;
-   bread_N = regN "pão" ;
+   bread_N = mkN "pão" "pães" masculine ;
    break_V2 = dirV2 (special_ppV (regV "estragar") "estrago") ;
    broad_A = regADeg "largo" ;
    brother_N2 = deN2 (regN "irmão") ;
@@ -75,7 +75,7 @@ lin
    fear_VS = mkVS (regV "temer") ;
    find_V2 = dirV2 (verboV (encontrar_38 "encontrar")) ;
    fish_N = mascN (regN "peixe") ;
-   floor_N = regN "chão" ;		-- piso
+   floor_N = mkN "chão" "chãos" masculine ;     -- piso
    forget_V2 = dirV2 (regV "esquecer") ;
    fridge_N = regN "geladeira" ;
    friend_N = regN "amigo" ;		-- amiga
@@ -131,7 +131,7 @@ lin
    old_A =  prefA (regADeg "velho") ;
    open_V2 = dirV2 (special_ppV (regV "abrir") "aberto") ;
    paint_V2A = mkV2A (regV "pintar") accusative (mkPrep "en") ;
-   paper_N = mkN "papel" ;
+   paper_N = mkN "papel" "papéis" masculine ;
    paris_PN = mkPN "Paris" masculine ;
    peace_N = mkN "paz" feminine ;
    pen_N = mkN "caneta" ;
@@ -182,7 +182,7 @@ lin
    stove_N = regN "forno" ;		-- estufa
    student_N = regN "estudante" ;	-- used both for fem & masc
    stupid_A = regADeg "estúpido" ;
-   sun_N = regN "sol" ;
+   sun_N = mkN "sol" "sóis" masculine ;
    switch8off_V2 = dirV2 (regV "apagar") ;
    switch8on_V2 = dirV2 (regV "prender") ;
    table_N = regN "mesa" ;
@@ -269,7 +269,7 @@ lin
    grass_N = regN "gramado" ;             -- hierba, césped (masc)
    guts_N = regN "tripa" ;              -- gut=intestino ---- pl.t. tripas
    hair_N = regN "cabelo" ;            -- pelo
-   hand_N = femN (regN "mão") ;
+   hand_N = mkN  "mão" "mãos" feminine ;
    head_N = regN "cabeça" ;
    heart_N = mkN "coração" "corações" masculine ;
    horn_N = mascN (regN "chifre") ;
