@@ -74,7 +74,7 @@ lin
   most_Predet = {s = \\_,c => prepCase c ++ ["la mayor parte"] ; c = CPrep P_de ;
     a = PNoAg} ;
   much_Det = mkDeterminer "mucho" "mucha" Sg False ;
-  must_VV = mkVV (verboV (deber_6 "deber")) ;
+  must_VV = mkVV (verboV (dever_6 "dever")) ;
   no_Quant =
     let
       ningun : ParadigmsPor.Number => ParadigmsPor.Gender => Case => Str = table {
@@ -172,7 +172,7 @@ oper
     }} ** {n = Pl} ;
 lin
   as_CAdv = X.mkCAdv "si" conjThan ; ----
-   have_V2 = dirV2 (verboV (tener_4 "tener")) ;
+   have_V2 = dirV2 (verboV (ter_4 "ter")) ;
 
   that_Subj = {s = "que" ; m = Conjunct} ;
 

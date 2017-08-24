@@ -199,7 +199,7 @@ oper
 
   mkV : overload {
 
--- Regular verbs are ones inflected like "cortar", "deber", or "vivir".
+-- Regular verbs are ones inflected like "cortar", "dever", or "vivir".
 -- The regular verb function is the first conjugation ("ar") recognizes
 -- the variations corresponding to the patterns
 -- "actuar, cazar, guiar, pagar, sacar". The module $BeschPor$ gives
@@ -381,7 +381,7 @@ oper
       z  = Predef.dp 1 (Predef.tk 2 x) ;
       verb = case ar of {
         "ir" =>  vivir_7 x ;
-        "er" =>  deber_6 x ;
+        "er" =>  dever_6 x ;
         "ar" => case z of {
            "u" => actuar_9 x ;
            "z" => cazar_21 x ;

@@ -321,7 +321,7 @@ lin
    freeze_V = regV "congelar" ;
    give_V3 = dirdirV3 (verboV (dar_27 "dar")) ;
   hit_V2 = dirV2 (regV "golpear") ;
-  hold_V2 = dirV2 (verboV (tener_4 "tener")) ;
+  hold_V2 = dirV2 (verboV (ter_4 "ter")) ;
   hunt_V2 = dirV2 (regV "caçar") ;
   kill_V2 = dirV2 (regV "matar") ;
    laugh_V = regV "rir" ; ----V reír_67
